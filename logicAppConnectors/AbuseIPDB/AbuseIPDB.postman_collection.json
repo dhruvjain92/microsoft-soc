@@ -1,0 +1,263 @@
+{
+	"info": {
+		"_postman_id": "d7f4b95e-2207-4a79-b5a8-32fa4153e78f",
+		"name": "AbuseIPDB",
+		"description": "AbuseIPDB is a project dedicated to helping combat the spread of hackers, spammers, and abusive activity on the internet. One can check the report history of any IP address to see if anyone else has reported malicious activities. One can report abusive IPs engaging in hacking attempts or other malicious behavior and help fellow sysadmins! \n\nUrl: https://www.abuseipdb.com/",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AbuseIPDB - Check IP Reputation",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Key",
+						"value": "08ecf10258c1be8c503dbbce29e0888f7801f0f8fe63064b641abb13b695ee78a517f8c73f71b6d1",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.abuseipdb.com/api/v2/check?ipAddress=8.8.8.8&maxAgeInDays=90&verbose",
+					"protocol": "https",
+					"host": [
+						"api",
+						"abuseipdb",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"check"
+					],
+					"query": [
+						{
+							"key": "ipAddress",
+							"value": "8.8.8.8"
+						},
+						{
+							"key": "maxAgeInDays",
+							"value": "90"
+						},
+						{
+							"key": "verbose",
+							"value": null
+						}
+					]
+				},
+				"description": "The check endpoint accepts a single IP address (v4 or v6). Optionally you may set the maxAgeInDays parameter to only return reports within the last x amount of days.\n\nThe desired data is stored in the data property. Here you can inspect details regarding the IP address queried, such as version, country of origin, usage type, ISP, and domain name. And of course, there is the valuable abusive report."
+			},
+			"response": [
+				{
+					"name": "AbuseIPDB - Check IP Reputation - Result",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Key",
+								"value": "08ecf10258c1be8c503dbbce29e0888f7801f0f8fe63064b641abb13b695ee78a517f8c73f71b6d1",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.abuseipdb.com/api/v2/check?ipAddress=8.8.8.8&maxAgeInDays=90&verbose",
+							"protocol": "https",
+							"host": [
+								"api",
+								"abuseipdb",
+								"com"
+							],
+							"path": [
+								"api",
+								"v2",
+								"check"
+							],
+							"query": [
+								{
+									"key": "ipAddress",
+									"value": "8.8.8.8"
+								},
+								{
+									"key": "maxAgeInDays",
+									"value": "90"
+								},
+								{
+									"key": "verbose",
+									"value": null
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 01 Oct 2021 08:45:12 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "1000"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "999"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=XrxWG39WnMmkYXqdu4nVh%2ByY%2FLn7T%2FjLytYG2vFRlFnHEVck28wZEhg96L4VuOD0ZvGLG8Gh2XoGWivuAlHi86uNLXJ6bjeFDPEGk6oKC71n19N7%2BS6q4BxttO4rJeWst2P4\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "697469d958042dff-BOM"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"ipAddress\": \"8.8.8.8\",\n        \"isPublic\": true,\n        \"ipVersion\": 4,\n        \"isWhitelisted\": true,\n        \"abuseConfidenceScore\": 0,\n        \"countryCode\": \"US\",\n        \"usageType\": \"Data Center/Web Hosting/Transit\",\n        \"isp\": \"Google LLC\",\n        \"domain\": \"google.com\",\n        \"hostnames\": [\n            \"dns.google\"\n        ],\n        \"countryName\": \"United States of America\",\n        \"totalReports\": 17,\n        \"numDistinctUsers\": 9,\n        \"lastReportedAt\": \"2021-09-20T18:30:04+00:00\",\n        \"reports\": [\n            {\n                \"reportedAt\": \"2021-09-20T18:30:04+00:00\",\n                \"comment\": \"Found on Threats Hub   / proto=17  .  srcport=34206  .  dstport=9034  .      (3667)\",\n                \"categories\": [\n                    15,\n                    18\n                ],\n                \"reporterId\": 14180,\n                \"reporterCountryCode\": \"GB\",\n                \"reporterCountryName\": \"United Kingdom of Great Britain and Northern Ireland\"\n            },\n            {\n                \"reportedAt\": \"2021-09-20T16:32:44+00:00\",\n                \"comment\": \"9034/udp 9034/udp\\n[2021-09-20]2pkt\",\n                \"categories\": [\n                    14\n                ],\n                \"reporterId\": 20262,\n                \"reporterCountryCode\": \"JP\",\n                \"reporterCountryName\": \"Japan\"\n            },\n            {\n                \"reportedAt\": \"2021-09-20T16:25:38+00:00\",\n                \"comment\": \"leeee_ufw_block_log\",\n                \"categories\": [\n                    14\n                ],\n                \"reporterId\": 56307,\n                \"reporterCountryCode\": \"US\",\n                \"reporterCountryName\": \"United States of America\"\n            },\n            {\n                \"reportedAt\": \"2021-09-17T17:04:01+00:00\",\n                \"comment\": \"[New] Noxious/Nuisible/вредоносный Host.\",\n                \"categories\": [\n                    14,\n                    18\n                ],\n                \"reporterId\": 53887,\n                \"reporterCountryCode\": \"FR\",\n                \"reporterCountryName\": \"France\"\n            },\n            {\n                \"reportedAt\": \"2021-09-12T06:48:32+00:00\",\n                \"comment\": \"Sep 12 06:48:16 SRC=8.8.8.8 PROTO=TCP SPT=443 DPT=54502 \\nSep 12 06:48:17 SRC=8.8.8.8 PROTO=TCP SPT=443 DPT=54502 \\nSep 12 06:48:19 SRC=8.8.8.8 PROTO=TCP SPT=443 DPT=54502 \\n...\",\n                \"categories\": [\n                    14\n                ],\n                \"reporterId\": 44299,\n                \"reporterCountryCode\": \"IS\",\n                \"reporterCountryName\": \"Iceland\"\n            },\n            {\n                \"reportedAt\": \"2021-09-12T06:46:39+00:00\",\n                \"comment\": \"[HOST1] Port Scan detected\",\n                \"categories\": [\n                    14\n                ],\n                \"reporterId\": 46038,\n                \"reporterCountryCode\": \"DE\",\n                \"reporterCountryName\": \"Germany\"\n            },\n            {\n                \"reportedAt\": \"2021-09-10T21:58:29+00:00\",\n                \"comment\": \"Unauthorized port sweep\",\n                \"categories\": [\n                    14\n                ],\n                \"reporterId\": 54328,\n                \"reporterCountryCode\": \"PL\",\n                \"reporterCountryName\": \"Poland\"\n            },\n            {\n                \"reportedAt\": \"2021-09-10T08:16:26+00:00\",\n                \"comment\": \"Sep 10 05:18:24 SRC=8.8.8.8 PROTO=TCP SPT=443 DPT=25048 \\nSep 10 05:18:25 SRC=8.8.8.8 PROTO=TCP SPT=443 DPT=25048 \\nSep 10 05:18:27 SRC=8.8.8.8 PROTO=TCP SPT=443 DPT=25048 \\nSe\\n...\",\n                \"categories\": [\n                    14\n                ],\n                \"reporterId\": 44299,\n                \"reporterCountryCode\": \"CA\",\n                \"reporterCountryName\": \"Canada\"\n            },\n            {\n                \"reportedAt\": \"2021-09-04T03:03:50+00:00\",\n                \"comment\": \"[New] Noxious/Nuisible/вредоносный Host.\",\n                \"categories\": [\n                    14,\n                    18\n                ],\n                \"reporterId\": 53887,\n                \"reporterCountryCode\": \"FR\",\n                \"reporterCountryName\": \"France\"\n            },\n            {\n                \"reportedAt\": \"2021-09-03T21:58:13+00:00\",\n                \"comment\": \"Unauthorized port sweep\",\n                \"categories\": [\n                    14\n                ],\n                \"reporterId\": 54328,\n                \"reporterCountryCode\": \"PL\",\n                \"reporterCountryName\": \"Poland\"\n            },\n            {\n                \"reportedAt\": \"2021-09-01T14:10:18+00:00\",\n                \"comment\": \"MultiHost/MultiPort Probe, Scan, Hack -\",\n                \"categories\": [\n                    14,\n                    15\n                ],\n                \"reporterId\": 19479,\n                \"reporterCountryCode\": \"RS\",\n                \"reporterCountryName\": \"Serbia\"\n            },\n            {\n                \"reportedAt\": \"2021-08-24T12:56:19+00:00\",\n                \"comment\": \"Found on Threats Hub   / proto=17  .  srcport=53  .  dstport=59395  .      (2445)\",\n                \"categories\": [\n                    15,\n                    18\n                ],\n                \"reporterId\": 14180,\n                \"reporterCountryCode\": \"GB\",\n                \"reporterCountryName\": \"United Kingdom of Great Britain and Northern Ireland\"\n            },\n            {\n                \"reportedAt\": \"2021-08-20T13:29:40+00:00\",\n                \"comment\": \"Found on Threats Hub   / proto=17  .  srcport=53  .  dstport=57787  .      (1842)\",\n                \"categories\": [\n                    15,\n                    18\n                ],\n                \"reporterId\": 14180,\n                \"reporterCountryCode\": \"GB\",\n                \"reporterCountryName\": \"United Kingdom of Great Britain and Northern Ireland\"\n            },\n            {\n                \"reportedAt\": \"2021-08-16T20:23:45+00:00\",\n                \"comment\": \"[New] Noxious/Nuisible/вредоносный Host.\",\n                \"categories\": [\n                    14,\n                    18\n                ],\n                \"reporterId\": 53887,\n                \"reporterCountryCode\": \"FR\",\n                \"reporterCountryName\": \"France\"\n            },\n            {\n                \"reportedAt\": \"2021-08-11T14:13:41+00:00\",\n                \"comment\": \"[New] Noxious/Nuisible/вредоносный Host.\",\n                \"categories\": [\n                    14,\n                    18\n                ],\n                \"reporterId\": 53887,\n                \"reporterCountryCode\": \"FR\",\n                \"reporterCountryName\": \"France\"\n            },\n            {\n                \"reportedAt\": \"2021-08-04T18:04:58+00:00\",\n                \"comment\": \"Blocked by Sophos UTM Network Protection / proto=17  .  srcport=53  .  dstport=59160  .      (2928)\",\n                \"categories\": [\n                    15,\n                    18\n                ],\n                \"reporterId\": 14180,\n                \"reporterCountryCode\": \"GB\",\n                \"reporterCountryName\": \"United Kingdom of Great Britain and Northern Ireland\"\n            },\n            {\n                \"reportedAt\": \"2021-08-03T15:32:57+00:00\",\n                \"comment\": \"penis eater here\",\n                \"categories\": [\n                    4\n                ],\n                \"reporterId\": 61437,\n                \"reporterCountryCode\": \"US\",\n                \"reporterCountryName\": \"United States of America\"\n            }\n        ]\n    }\n}"
+				},
+				{
+					"name": "AbuseIPDB - Check IP Reputation - Result without verbose",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Key",
+								"value": "08ecf10258c1be8c503dbbce29e0888f7801f0f8fe63064b641abb13b695ee78a517f8c73f71b6d1",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.abuseipdb.com/api/v2/check?ipAddress=8.8.8.8&maxAgeInDays=90",
+							"protocol": "https",
+							"host": [
+								"api",
+								"abuseipdb",
+								"com"
+							],
+							"path": [
+								"api",
+								"v2",
+								"check"
+							],
+							"query": [
+								{
+									"key": "ipAddress",
+									"value": "8.8.8.8"
+								},
+								{
+									"key": "maxAgeInDays",
+									"value": "90"
+								},
+								{
+									"key": "verbose",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 01 Oct 2021 08:45:46 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "1000"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "998"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=AEruPb61ZJVoxerzvdRwdIF%2FjGcUrJgjwlgIOgo4euPwbgtslVgW1ieNWnf5wijkIXDX7RWIP8DysuFivqaNQGT26OotOVkZ2IBHA1ISJ%2FhlBDB3Fx%2Ft28D6G657NE5CdiNp\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "69746aacbac92dff-BOM"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"ipAddress\": \"8.8.8.8\",\n        \"isPublic\": true,\n        \"ipVersion\": 4,\n        \"isWhitelisted\": true,\n        \"abuseConfidenceScore\": 0,\n        \"countryCode\": \"US\",\n        \"usageType\": \"Data Center/Web Hosting/Transit\",\n        \"isp\": \"Google LLC\",\n        \"domain\": \"google.com\",\n        \"hostnames\": [\n            \"dns.google\"\n        ],\n        \"totalReports\": 17,\n        \"numDistinctUsers\": 9,\n        \"lastReportedAt\": \"2021-09-20T18:30:04+00:00\"\n    }\n}"
+				}
+			]
+		}
+	]
+}

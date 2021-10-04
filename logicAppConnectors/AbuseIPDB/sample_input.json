@@ -1,0 +1,14 @@
+{
+    "method": "get",
+    "queries": {
+        "ipAddress": "8.8.8.8",
+        "maxAgeInDays": "90",
+        "verbose": "true"
+    },
+    "path": "/api/v2/check",
+    "host": {
+        "connection": {
+            "name": "/subscriptions/SUBSCRIPTION_ID/resourceGroups/RG_ID/providers/Microsoft.Web/connections/AbuseIPDB"
+        }
+    }
+}

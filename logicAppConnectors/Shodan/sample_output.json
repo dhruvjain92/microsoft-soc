@@ -1,0 +1,98 @@
+{
+    "statusCode": 200,
+    "headers": {
+        "Transfer-Encoding": "chunked",
+        "Vary": "Accept-Encoding",
+        "Access-Control-Allow-Origin": "*",
+        "X-Frame-Options": "DENY",
+        "X-Content-Type-Options": "nosniff",
+        "X-XSS-Protection": "1; mode=block",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains",
+        "Permissions-Policy": "interest-cohort=()",
+        "CF-Cache-Status": "DYNAMIC",
+        "Expect-CT": "max-age=604800,report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+        "CF-RAY": "696f39064a9b5773-IAD",
+        "alt-svc": "h3=\":443\"; ma=86400,h3-29=\":443\"; ma=86400,h3-28=\":443\"; ma=86400,h3-27=\":443\"; ma=86400",
+        "Date": "Thu, 30 Sep 2021 17:38:04 GMT",
+        "Content-Type": "application/json; charset=UTF-8",
+        "Content-Length": "1349"
+    },
+    "body": {
+        "region_code": "CA",
+        "tags": [],
+        "ip": 134744072,
+        "area_code": null,
+        "domains": [
+            "dns.google"
+        ],
+        "hostnames": [
+            "dns.google"
+        ],
+        "postal_code": null,
+        "dma_code": null,
+        "country_code": "US",
+        "org": "Google LLC",
+        "data": [
+            {
+                "hash": -553166942,
+                "timestamp": "2021-09-30T17:35:38.348952",
+                "isp": "Google LLC",
+                "transport": "udp",
+                "data": "\nRecursion: enabled",
+                "asn": "AS15169",
+                "port": 53,
+                "hostnames": [
+                    "dns.google"
+                ],
+                "location": {
+                    "city": "Mountain View",
+                    "region_code": "CA",
+                    "area_code": null,
+                    "longitude": -122.0775,
+                    "country_code3": null,
+                    "latitude": 37.4056,
+                    "postal_code": null,
+                    "dma_code": null,
+                    "country_code": "US",
+                    "country_name": "United States"
+                },
+                "dns": {
+                    "software": null,
+                    "recursive": true,
+                    "resolver_id": null,
+                    "resolver_hostname": null
+                },
+                "ip": 134744072,
+                "domains": [
+                    "dns.google"
+                ],
+                "org": "Google LLC",
+                "os": null,
+                "_shodan": {
+                    "crawler": "78039f81a0245caa8ab71c98182f0eff0ce52aab",
+                    "ptr": true,
+                    "id": "3242cb6d-4ed5-40da-b521-eeb95bed03fb",
+                    "module": "dns-udp",
+                    "options": {}
+                },
+                "opts": {
+                    "raw": "34ef818200010000000000000776657273696f6e0462696e640000100003"
+                },
+                "ip_str": "8.8.8.8"
+            }
+        ],
+        "asn": "AS15169",
+        "city": "Mountain View",
+        "latitude": 37.4056,
+        "isp": "Google LLC",
+        "longitude": -122.0775,
+        "last_update": "2021-09-30T17:35:38.348952",
+        "country_code3": null,
+        "country_name": "United States",
+        "ip_str": "8.8.8.8",
+        "os": null,
+        "ports": [
+            53
+        ]
+    }
+}

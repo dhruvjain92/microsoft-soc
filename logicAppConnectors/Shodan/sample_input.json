@@ -1,0 +1,9 @@
+{
+    "method": "get",
+    "path": "/shodan/host/8.8.8.8",
+    "host": {
+        "connection": {
+            "name": "/subscriptions/SUBSCRIPTION_ID/resourceGroups/RG_ID/providers/Microsoft.Web/connections/Shodan"
+        }
+    }
+}
