@@ -1,0 +1,12 @@
+{
+    "method": "get",
+    "queries": {
+        "ip": "122.226.181.165"
+    },
+    "path": "/iprep/v1/pay-as-you-go/",
+    "host": {
+        "connection": {
+            "name": "/subscriptions/SUBSCRIPTION_ID/resourceGroups/RG_ID/providers/Microsoft.Web/connections/IPVoid"
+        }
+    }
+}
