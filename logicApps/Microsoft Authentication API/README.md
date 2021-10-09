@@ -1,2 +1,7 @@
 # Microsoft Authenticator API - Simplified Token Generation
 This will generate an access token for the App that has been registered in AD. Just pass a unique ID (that can be defined when logic app is edited) and the scope. This will encapsulate your Client ID and Client Secret to decrease the chance of them getting revealed and leaked. Instead you get an access token that's valid for one hour.
+
+
+[![Deploy To Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fdhruvjain92%2Fmicrosoft-soc%2Fmain%2FlogicApps%2FMicrosoft%2520Authentication%2520API%2FazureDeploy.json)
+[![Deploy To Azure US Gov](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazuregov.svg?sanitize=true)](https://portal.azure.us/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fdhruvjain92%2Fmicrosoft-soc%2Fmain%2FlogicApps%2FMicrosoft%2520Authentication%2520API%2FazureDeploy.json)
+[![Visualize](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.svg?sanitize=true)](http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2Fdhruvjain92%2Fmicrosoft-soc%2Fmain%2FlogicApps%2FMicrosoft%2520Authentication%2520API%2FazureDeploy.json)
